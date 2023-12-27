@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat&family=Russo+One&display=swap');
+*{
+    box-sizing: border-box;
+}
+.text-highlight{
+    color: #00a43f !important;
+    text-decoration: none;
+}
+.text-link{
+    color: #00a43f !important;
+}
+h1,h2{
+    font-family: 'Michroma', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 1em;
+    font-family: 'Michroma', sans-serif;
+    position: relative;
+}
+/* HERO
+=======================
+ */
+ .hero{
+    background: #0C0E12;
+    border-radius: 1em;
+    padding: 1em 2em;
+    color: #FFF;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.hero > nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero__navLinks{
+    display: none;
+    list-style: none;
+    align-items: center;
+    gap: 1em;
+}
+nav > span{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+nav > aside{
+    background-color: #FFF;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    color: #0C0E12;
+    padding: 2em;
+    transition: .5s;
+    display: none;
+}
+nav > aside > ion-icon{
+    color: #0C0E12;
+    font-size: 2rem;
+    display: block;
+}
+nav > aside > a{
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin: 2em auto;
+    text-align: center;
+    color: #0C0E12;
+}
+/* HERO ITSELF
+=======================
+ */
+.hero__logo{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+}
+.hero__navLinks a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: .3em;
+    font-weight: 600;
+}
+.hero__text{
+    margin-top: 3em;
+    text-align: center;
+}
+.hero__text > .event-date{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+}
+.hero__text > h1{
+    font-family: 'Russo One', sans-serif;
+    font-size: calc(3vw + 1.5rem);
+    margin: 0;
+    margin-top: 0.5em;
+    line-height: 1.25em;
+}
+.hero__text > p:last-child{
+    margin-top: .5em;
+    font-size: .85rem;
+    color: green;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+.hero__cta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    flex-direction: column;
+}
+.hero__ctaText{
+    text-align: center;
+    flex: .6;
+    font-size: .9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+.hero__ctaBtn{
+    text-align: center;
+    padding: 1em;
+}
+.hero__ctaBtn-circle{
+    border: .1em solid rgba(171, 171, 171, .3);
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 12em; 
+    height: 12em;
+    position: relative;
+}
+.hero__ctaBtn a{
+    border: 1px solid #FFF;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #FFF;
+    width: 12em; 
+    height: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: -2em;
+    text-align: center;
+    right: -2em;
+    border-radius: 50%;
+}
+.hero__ctaBtn a > ion-icon{
+    font-size: 1.7rem
+}
+.hero__ctaBtn a > p{
+    margin: 0;
+}
+@media(min-width: 550px){
+    .hero__navLinks{
+        display: flex;
+    }
+    nav > span{
+        display: none;
+        font-size: 1.7rem;
+    }
+}
+@media(min-width: 700px){
+    .hero__cta{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 2em;
+    }
+    .hero__ctaText > p{
+        text-align: left;
+    }
+    .hero__text{
+        text-align: left;
+    }
+}
+
+main{
+    margin-top: 4em;
+    padding: 0 2em;
+}
+main > section{
+    margin: 2em auto;
+}
+/* About
+==========================
+*/
+section.about > h2{
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1.5em;
+}
+.about__content{
+    display: flex;
+    flex-direction: column;
+}
+.about__Image{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about__Image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about__text{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+}
+@media(min-width: 850px){
+    .about__content{
+        flex-direction: row;
+        gap: 2em;
+    }
+    .about__Image{
+        max-height: 70vh;
+        flex: 1;
+    }
+    .about__Image > img{
+        object-fit: cover;
+    }
+    .about__text{
+        flex: 1;
+        font-size: 1.15rem;
+    }
+    .about__text > p{
+        margin-top: 0;
+    }
+}
+/* Agenda 
+=======================
+Agenda styles aren't mobile-first
+*/
+section.agenda{
+    border-radius: 1px solid red;
+}
+section.agenda > h2{
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Michroma', sans-serif;
+}
+section.agenda > p{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: .5em;
+    font-family: 'Montserrat', sans-serif;
+}
+.agenda__cardRow{
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    padding-bottom: .5em;
+    /* height: 10em;       */
+}
+/* Hide Agenda Scrollbar */
+.agenda__cardRow::-webkit-scrollbar {
+    height: .5em;
+    visibility: hidden;
+}
+.agenda__scrollBtn{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    justify-content: flex-end;
+}
+@media (max-width: 700px){
+    .agenda__scrollBtn{
+        display: none;
+    }
+}
+.agenda__scrollBtn > button{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #0C0E12;
+    border: 1px solid #0C0E12;
+}
+.agenda__scrollBtn > button > ion-icon{
+    font-size: 1.4rem;
+    color: #FFF;
+}
+.agenda__card{
+    width: 17em;
+    flex: none;
+    display: flex;
+    align-items: flex-end;
+    padding: 1em;
+    height: 18em;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.agenda__card > .dark-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, .5);
+}
+.agenda__card > h3{
+    font-size: 1rem;
+    margin: 0;
+    color: #FFF;
+    z-index: 999;
+}
+
+/* Agenda card images */
+.agenda__card.one{
+    background-image: url(../images/agenda/collaboration.webp);
+}
+.agenda__card.two{
+    background-image: url(../images/agenda/diag.webp);
+}
+.agenda__card.three{
+    background-image: url(../images/agenda/ehr.webp);
+}
+.agenda__card.four{
+    background-image: url(../images/agenda/pharma.webp);
+}
+.agenda__card.five{
+    background-image: url(../images/agenda/business.webp);
+}
+.agenda__card.six{
+    background-image: url(../images/agenda/collaboration.webp);
+}
+.agenda__card.seven{
+    background-image: url(../images/agenda/blockchain.webp);
+}
+.agenda__card.eight{
+    background-image: url(../images/agenda/ehr.webp);
+}
+.agenda__card.nine{
+    background-image: url(../images/agenda/lab.webp);
+}
+
+/* 
+=========================================== */
+
+
+/* Speakers
+=========================
+ */
+ section.speakers > h2{
+    /* display: none; */
+    text-align: center;
+}
+section.speakers > .speakers__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.speaker__box{
+    /* border: 1px solid red; */
+    /* background-image: url(../images/Tobi_Amira.jpeg); */
+    height: 35em;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 2em;
+}
+.speaker__box > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    z-index: -1;
+    border-radius: 2em;
+}
+.speaker__boxContent{
+    z-index: 1;
+    /* border: 1px solid rgb(0, 255, 47); */
+    width: 100%;
+    padding: 1em;
+    color: #FFF;
+    position: relative;
+}
+.speaker__boxContent h3, .speaker__boxContent p{
+    z-index: 999;
+    margin-top: .7em;
+    margin-bottom: 0;
+}
+.speaker__boxContent > .dark-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, .3);
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+
+}
+.speaker-five{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    grid-area: 1 / 2 / 3 / 3;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+@media(max-width: 700px){
+    section.speakers > .speakers__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+    section.speakers > h2{
+        display: block;
+        text-align: center;
+    }
+    .speaker-five{
+        display: none;
+    }
+}
+@media(max-width: 500px){
+    section.speakers > .speakers__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: fr repeat(7, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+}
+/* Register
+===========================
+ */
+ .register{
+    background: #0C0E12;
+    color: #FFF;
+    border-radius: 2em;
+    position: relative;
+    margin-top: 3em;
+    padding: 2em;
+}
+.register img{
+    display: none;
+}
+.register > h2{
+    font-size: 1.7rem;
+    z-index: 999;
+    /* width: 50%; */
+}
+.register__box{
+    background-color: #86DA1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    bottom:  -50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: 0;
+}
+.register__box > a{
+    width: 90%;
+    background-color: #0C0E12;
+    color: #FFF;
+    font-family: 'Michroma', sans-serif;
+    padding: 1em;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    border-radius: .9em;
+}
+.sponsors{
+    display: none;
+}
+@media(min-width: 700px){
+    .register{
+        margin-top: 15em;
+        padding: 2em 5em;
+    }
+    .register img{
+        display: inline-block;
+    }
+    .register > h2{
+        font-size: 2.1rem;
+        width: 50%;
+    }
+    .register__box{
+        position: absolute;
+        top: -50%;
+        right: 2em;
+        left: auto;
+        transform: none;
+        background-color: #86DA1A;
+        height: 15em;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1em;
+        justify-content: space-between;
+        padding: 2em;
+    }
+    .register__box > img{
+        width: 100%;
+        height: 5em;
+        object-fit: contain;
+    }
+    .register__box > a{
+        width: 90%;
+        background-color: #0C0E12;
+        color: #FFF;
+        font-family: 'Michroma', sans-serif;
+        padding: 1em;
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: center;
+        border-radius: .9em;
+    }
+}
+/* Footer
+=======================
+ */
+ .footer{
+    font-family: 'Montserrat', sans-serif;
+    color: #0C0E12;
+    margin-top: 4em;
+}
+footer.footer > .footer__details{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+    color: #0C0E12;
+    padding: 0 2em;
+}
+.footer__details > .column > img{
+    width: 8em;
+    height: 8em;
+    object-fit: contain;
+}
+.footer__details > .column > h3{
+    margin: 0;
+    font-size: .95rem;
+}
+.footer__details > .column > p{
+    margin: 0;
+    font-size: .85rem;
+    margin-top: 0.5em;
+    font-weight: 500;
+}
+.footer__details > .column > div{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    margin-top: 0.5em;
+}
+.footer__details > .column > div > a{
+    text-decoration: none;
+    color: #0C0E12;
+    font-size: .85rem;
+    font-weight: 500;
+}
+.section__footerClose{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    flex-wrap: wrap;
+}
+.section__footerClose > p{
+    font-size: .85rem;
+    font-weight: 500;
+}
+.section__footerClose > div{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.section__footerClose > div a{
+    text-decoration: none;
+    color: #0C0E12;
+}
+@media(max-width: 1016px){
+    .footer-img{
+        width: 100%;
+    }
+}
