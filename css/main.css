@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Russo+One&display=swap');
+/* font-family: 'Mukta', sans-serif;
+font-family: 'Russo One', sans-serif; */
 *{
     box-sizing: border-box;
 }
@@ -10,21 +12,23 @@
     color: #00a43f !important;
 }
 h1,h2{
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Mukta', sans-serif;
 }
 body{
     margin: 0;
     padding: 1em;
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Mukta', sans-serif;
     position: relative;
 }
 /* HERO
 =======================
  */
  .hero{
-    background: #0C0E12;
+    /* background: #0C0E12; */
+    background-image: url(../images/hero-bg.jpeg);
+    background-size: cover;
     border-radius: 1em;
-    padding: 1em 2em;
+    padding: 2em 4em;
     color: #FFF;
     max-width: 1300px;
     margin: 0 auto;
@@ -33,6 +37,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.hero__logo img{
+    width: 4em;
+    object-fit: contain;
 }
 .hero__navLinks{
     display: none;
@@ -77,14 +85,14 @@ nav > aside > a{
     text-decoration: none;
     color: #FFF;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mukta', sans-serif;
     font-size: 1.3rem;
 }
 .hero__navLinks a{
     text-decoration: none;
     color: #FFF;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-family: 'Mukta', sans-serif;
     display: flex;
     align-items: center;
     gap: .3em;
@@ -95,22 +103,29 @@ nav > aside > a{
     text-align: center;
 }
 .hero__text > .event-date{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mukta', sans-serif;
     font-size: .9rem;
 }
 .hero__text > h1{
     font-family: 'Russo One', sans-serif;
     font-size: calc(3vw + 1.5rem);
     margin: 0;
-    margin-top: 0.5em;
+    /* margin-top: 0.2em; */
     line-height: 1.25em;
+}
+@media(max-width: 638px){
+    .hero__text > h1{
+        word-spacing: 999px;
+    }
 }
 .hero__text > p:last-child{
     margin-top: .5em;
     font-size: .85rem;
-    color: green;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mukta', sans-serif;
     font-weight: normal;
+}
+.hero__text > p:last-child > a{
+    color: inherit;
 }
 .hero__cta{
     display: flex;
@@ -122,9 +137,11 @@ nav > aside > a{
 .hero__ctaText{
     text-align: center;
     flex: .6;
-    font-size: .9rem;
-    font-family: 'Montserrat', sans-serif;
+    /* font-size: .9rem; */
+    font-family: 'Mukta', sans-serif;
     font-weight: normal;
+    display: flex;
+    /* align-items: center; */
 }
 .hero__ctaBtn{
     text-align: center;
@@ -175,7 +192,7 @@ nav > aside > a{
     .hero__cta{
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 2em;
+        margin-top: -4em;
     }
     .hero__ctaText > p{
         text-align: left;
@@ -196,30 +213,57 @@ main > section{
 ==========================
 */
 section.about > h2{
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Russo One', sans-serif;
     text-align: center;
+    text-transform: uppercase;
     font-size: 1.4rem;
     font-weight: 900;
     margin-bottom: 1.5em;
 }
 .about__content{
-    display: flex;
-    flex-direction: column;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .about__Image{
-    width: 80%;
+    /* border: 1px solid rgb(0, 255, 21); */
     margin-left: auto;
     margin-right: auto;
+    flex: .2;
 }
 .about__Image > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+@media(max-width: 850px){
+    .about__Image{
+        display: none;
+    }
+    .about__content{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .about__text{
+        grid-area: 1 / 1 / 2 / 3;
+
+
+    }
+}
 .about__text{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    flex: .8;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
 }
 @media(min-width: 850px){
     .about__content{
@@ -235,7 +279,7 @@ section.about > h2{
     }
     .about__text{
         flex: 1;
-        font-size: 1.15rem;
+        font-size: 1rem;
     }
     .about__text > p{
         margin-top: 0;
@@ -251,13 +295,13 @@ section.agenda{
 section.agenda > h2{
     text-align: center;
     margin-bottom: 0;
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Russo One', sans-serif;
 }
 section.agenda > p{
     text-align: center;
     font-size: 1rem;
     margin-top: .5em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mukta', sans-serif;
 }
 .agenda__cardRow{
     display: flex;
@@ -319,7 +363,7 @@ section.agenda > p{
     background: rgba(0, 0, 0, .5);
 }
 .agenda__card > h3{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0;
     color: #FFF;
     z-index: 999;
@@ -327,31 +371,34 @@ section.agenda > p{
 
 /* Agenda card images */
 .agenda__card.one{
-    background-image: url(../images/agenda/collaboration.webp);
+    background-image: url(../images/agenda/renewable.webp);
 }
 .agenda__card.two{
-    background-image: url(../images/agenda/diag.webp);
+    background-image: url(../images/agenda/sustainable_agriculture.webp);
 }
 .agenda__card.three{
-    background-image: url(../images/agenda/ehr.webp);
+    background-image: url(../images/agenda/water.webp);
+    background-size: 200%;
 }
 .agenda__card.four{
-    background-image: url(../images/agenda/pharma.webp);
+    background-image: url(../images/agenda/waste.webp);
+    background-size: 250%;
+    background-position: 50% 60%;
 }
 .agenda__card.five{
-    background-image: url(../images/agenda/business.webp);
+    background-image: url(../images/agenda/green.webp);
 }
 .agenda__card.six{
-    background-image: url(../images/agenda/collaboration.webp);
+    background-image: url(../images/agenda/smart_city.jpeg);
 }
 .agenda__card.seven{
-    background-image: url(../images/agenda/blockchain.webp);
+    background-image: url(../images/agenda/climate.webp);
 }
 .agenda__card.eight{
-    background-image: url(../images/agenda/ehr.webp);
+    background-image: url(../images/agenda/eco-construct.webp);
 }
 .agenda__card.nine{
-    background-image: url(../images/agenda/lab.webp);
+    background-image: url(../images/agenda/youth_education.webp);
 }
 
 /* 
@@ -361,8 +408,10 @@ section.agenda > p{
 /* Speakers
 =========================
  */
+ section.speakers{
+     display: none;
+ }
  section.speakers > h2{
-    /* display: none; */
     text-align: center;
 }
 section.speakers > .speakers__grid{
@@ -471,7 +520,7 @@ section.speakers > .speakers__grid{
     /* width: 50%; */
 }
 .register__box{
-    background-color: #86DA1A;
+    background-color: rgb(229, 168, 108);;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -488,16 +537,14 @@ section.speakers > .speakers__grid{
     width: 90%;
     background-color: #0C0E12;
     color: #FFF;
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Russo One', sans-serif;
     padding: 1em;
     font-size: 1rem;
     text-decoration: none;
     text-align: center;
     border-radius: .9em;
 }
-.sponsors{
-    display: none;
-}
+
 @media(min-width: 700px){
     .register{
         margin-top: 15em;
@@ -516,7 +563,7 @@ section.speakers > .speakers__grid{
         right: 2em;
         left: auto;
         transform: none;
-        background-color: #86DA1A;
+        background-color: rgb(229, 168, 108);
         height: 15em;
         width: 40%;
         display: flex;
@@ -535,7 +582,7 @@ section.speakers > .speakers__grid{
         width: 90%;
         background-color: #0C0E12;
         color: #FFF;
-        font-family: 'Michroma', sans-serif;
+        font-family: 'Russo One', sans-serif;
         padding: 1em;
         font-size: 1rem;
         text-decoration: none;
@@ -543,11 +590,55 @@ section.speakers > .speakers__grid{
         border-radius: .9em;
     }
 }
+/* Sponsors
+======================= */
+.sponsors{
+    margin: 2em auto;
+    margin-top: 4em;
+}
+.sponsors h2{
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.sponsors p{
+    margin-top: -0.2em;
+    text-align: center;
+}
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    animation: slide 10s infinite linear;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.sponsors .slider img {
+    width: 8em;
+    height: auto;
+    object-fit: contain;
+    margin: 0 10px;
+}
+/* Sponsors
+======================= */
+
 /* Footer
 =======================
  */
  .footer{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mukta', sans-serif;
     color: #0C0E12;
     margin-top: 4em;
 }
