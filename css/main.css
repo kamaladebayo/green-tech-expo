@@ -4,6 +4,9 @@ font-family: 'Russo One', sans-serif; */
 *{
     box-sizing: border-box;
 }
+.postponed{
+    color: #FF0000;
+}
 .text-highlight{
     color: #00a43f !important;
     text-decoration: none;
@@ -142,6 +145,11 @@ nav > aside > a{
     font-weight: normal;
     display: flex;
     /* align-items: center; */
+}
+.hero__ctaText p{
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
 }
 .hero__ctaBtn{
     text-align: center;
